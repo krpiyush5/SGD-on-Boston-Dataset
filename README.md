@@ -13,6 +13,7 @@ In the above graph we can see that red line or hyper-plane covered most of the p
 The big question is how we will find our best hyper-plane ?
 You don’t need to know any statistics our linear algebra to understand linear regression.Let me give some intuition behind linear regression.
 Suppose that you have found your best hyper-plane but there may be bunch of points which are lying outside  the hyper-plane .Let’s take an example you estimated a point which is lying on the plane but actually it was above the plane ,that makes an error so for this we have to minimise the error for all those points which are lying above or down the plane.Let’s take a point p1 which actually lies above the plane and point p2 which actually lies below the plane ,the actual y coordinates are y1 and y2 respectively.Then
+
 error1=y1(actual)-y1(predicted) > 0 since y1(actual) lies above to the plane
 
 error2=y2(actual)-y2(predicted)<0 since y2(actual) lies below the plane.
@@ -24,9 +25,11 @@ So this problem becomes optimization problem as we have seen in the case of Logi
 We know that equation of plane is Wx+b=0 where b is intercept ,our task is to find best W and b.
 
 Optimization equation:-
+
                          n
 best (W , b) =1/n(argmin Σ (y(actual)-y(pred))^2)
                         i=1
+                        
 Since distance between actual and predicted may be positive or negative so we squared it. As in the case of Logistic regression there is a logistic loss and here in linear regression there is squared loss ,from above equation we can see that square loss occur in the case of linear regression.
 
 In the real world data is not perfect so we have to add some error that leads to regularisation ,it forces W to be small as possible so equation becomes
@@ -80,17 +83,23 @@ Our equation for linear regression :-
             n
 L(W,B)= 1/n Σ (y-w.x-b)^2
            i=1
+           
 take partial derivative w.r.t W and B
+
             n
 dL/dW = 1/n Σ (-2x)(y-w.x-b)
            i=1
+           
            n
 dL/dB= 1/n Σ (-2)(y-w.x-b)
           i=1
 
+
 W(j+1)=W(j) – r *(dL/dW)
 
+
 B(j+1)=B(j) – r*(dL/dB)
+
 
 iterate this till W(k) becomes nearly equal to W(k+1) and B(k) nearly equal to B(k+1).
 
