@@ -26,9 +26,9 @@ We know that equation of plane is Wx+b=0 where b is intercept ,our task is to fi
 
 Optimization equation:-
 
-                         n
+                         
 best (W , b) =1/n(argmin Σ (y(actual)-y(pred))^2)
-                        i=1
+                       
                         
 Since distance between actual and predicted may be positive or negative so we squared it. As in the case of Logistic regression there is a logistic loss and here in linear regression there is squared loss ,from above equation we can see that square loss occur in the case of linear regression.
 
@@ -36,9 +36,9 @@ In the real world data is not perfect so we have to add some error that leads to
 
 
 
-                         n
+                         
 best (W , b) =1/n(argmin Σ (y(actual)-y(pred))^2) + regularisation
-                        i=1
+                       
 
 
 ## BOSTON DATASET:-
@@ -80,19 +80,19 @@ median value of owner-occupied homes in $1000s.
 It is a first order iterative optimization algorithm for finding minimum of a function .To find a local minima of a function using gradient descent ,one takes steps proportional to the negative of gradient of the function at the curent point .If instead , one takes steps proportional to the positive of the gradient approaches local maxima of a function.
 
 Our equation for linear regression :-
-            n
+            
 L(W,B)= 1/n Σ (y-w.x-b)^2
-           i=1
+          
            
 take partial derivative w.r.t W and B
 
-            n
-dL/dW = 1/n Σ (-2x)(y-w.x-b)
-           i=1
            
-           n
+dL/dW = 1/n Σ (-2x)(y-w.x-b)
+           
+           
+          
 dL/dB= 1/n Σ (-2)(y-w.x-b)
-          i=1
+         
 
 
 W(j+1)=W(j) – r *(dL/dW)
