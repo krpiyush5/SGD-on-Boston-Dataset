@@ -3,16 +3,14 @@ comparison between manual implementation of linear regression and SGD regressor 
 
 ## Linear Regression:-
 
-When we saw the word regression in Machine Learning field ,what comes in our mind .A regression problem is when output variable is a real or contnuous value , such as ‘price’ , ‘salary’, ‘weight’ .There are many regression model or algorithm but simplest one is Linear Regression.
+When we saw the word regression in Machine Learning field ,what comes in our mind .A regression problem is when output variable is a real or continuous value , such as ‘price’ , ‘salary’, ‘weight’ .There are many regression model or algorithm but simplest one is Linear Regression.
 It tries to fit best hyper-plane which goes through the points 
 
 
- 
 
-In the above graph we can see that red line or hyper-plane covered most of the points.
 The big question is how we will find our best hyper-plane ?
 You don’t need to know any statistics our linear algebra to understand linear regression.Let me give some intuition behind linear regression.
-Suppose that you have found your best hyper-plane but there may be bunch of points which are lying outside  the hyper-plane .Let’s take an example you estimated a point which is lying on the plane but actually it was above the plane ,that makes an error so for this we have to minimise the error for all those points which are lying above or down the plane.Let’s take a point p1 which actually lies above the plane and point p2 which actually lies below the plane ,the actual y coordinates are y1 and y2 respectively.Then
+Suppose that you have found your best hyper-plane but there may be bunch of points which are lying outside  the hyper-plane .Let’s take an example you estimated a point which is lying on the plane but actually it was above the plane ,that makes an error so for this we have to minimise the error for all those points which are lying above or down the plane.Let’s take a point p1 which actually lies above the plane and point p2 which actually lies below the plane ,the actual y coordinates of p1 and p2 are y1 and y2 respectively.Then
 
 error1=y1(actual)-y1(predicted) > 0 since y1(actual) lies above to the plane
 
@@ -20,7 +18,7 @@ error2=y2(actual)-y2(predicted)<0 since y2(actual) lies below the plane.
 
 
 
-So this problem becomes optimization problem as we have seen in the case of Logistic Regression. In this problem we have to find that hyperplane which minimise this error for all points .
+So this problem becomes optimization problem as we have seen in the case of Logistic Regression. In this problem we have to find that hyperplane which minimise the errors for all points .
 
 We know that equation of plane is Wx+b=0 where b is intercept ,our task is to find best W and b.
 
